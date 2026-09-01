@@ -27,7 +27,7 @@ build duration into the header — the only live data on the page.
 
 ## To do
 
-- [ ] `resume.pdf` — linked from the header and footer, not yet in the repo
+- [ ] ~~`resume.pdf`~~ — done
 - [ ] Swap the Agent Log prose for the real redacted transcript, and name the specific IAM action
 - [ ] Custom domain once DNS and the certificate are clean
 - [ ] Optional: migrate to S3 + CloudFront + Terraform, and write that up as a case study

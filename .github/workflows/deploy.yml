@@ -22,12 +22,12 @@ jobs:
 
       - name: Stamp the deploy line
         run: |
-          start=$(date +%s)
           sha_short="${GITHUB_SHA::7}"
           stamped_at=$(date -u +"%Y-%m-%d %H:%M UTC")
-          # Build duration is measured at the end; placeholder swapped below.
-          elapsed=$(( $(date +%s) - start ))
-          stamp="last deploy: ${sha_short} · ${stamped_at} · built in ${elapsed}s"
+          # Only facts that are actually measured go in the stamp. Build duration
+          # was removed: timing it inside this step measured nothing and printed 0s,
+          # which is precisely the fake instrument this page refuses to display.
+          stamp="last deploy: ${sha_short} · ${stamped_at}"
           # Escape for sed, then replace the marker in place.
           esc=$(printf '%s' "$stamp" | sed -e 's/[\/&]/\\&/g')
           sed -i "s/<!--DEPLOY_STAMP-->/${esc}/" index.html
