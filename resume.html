@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Tatia Razmadze — Platform Engineer — Resume</title>
+<style>
+  @page { size: Letter; margin: 0.42in 0.55in; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 9.5pt;
+    line-height: 1.3;
+    color: #16181a;
+  }
+  h1 { font-size: 17.5pt; margin: 0 0 1pt; letter-spacing: -0.01em; }
+  .tagline { font-size: 9pt; color: #2f6b5b; font-weight: 600; margin: 0 0 2pt; }
+  .contact { font-size: 8.3pt; color: #4a4d50; margin: 0 0 7pt; }
+  h2 {
+    font-size: 8.6pt; text-transform: uppercase; letter-spacing: .12em;
+    color: #4a4d50; margin: 8pt 0 4pt; padding-bottom: 1.5pt;
+    border-bottom: 0.6pt solid #c9ccd0;
+  }
+  .role { display: flex; justify-content: space-between; align-items: baseline; gap: 10pt; margin: 6pt 0 2pt; }
+  .role:first-of-type { margin-top: 2pt; }
+  .who { font-size: 9.8pt; font-weight: 700; }
+  .who .co { font-weight: 400; color: #34383c; }
+  .when { font-size: 8.8pt; color: #4a4d50; white-space: nowrap; }
+  ul { margin: 0 0 0 13pt; padding: 0; }
+  li { margin: 0 0 2pt; }
+  .skills p { margin: 0 0 2pt; }
+  .skills b { display: inline-block; min-width: 84pt; }
+  .edu { margin: 0; }
+  p { margin: 0 0 4pt; }
+</style>
+</head>
+<body>
+
+<h1>Tatia Razmadze</h1>
+<p class="tagline">Platform Engineer · AWS · Kubernetes · Terraform · CI/CD · Agentic AI Workflows</p>
+<p class="contact">New York, NY · tatiarazmadze.t@gmail.com · (929) 371-1449 · linkedin.com/in/tatiarazmadze · github.com/tatia-bit · tatiarazmadze.com</p>
+
+<h2>Summary</h2>
+<p>Platform Engineer with 5+ years building and operating production AWS platforms for analytics and healthcare-data workloads. Owns an EKS platform used by 30+ engineers across four product teams, with Terraform-managed infrastructure and GitOps delivery via Argo CD. Builds Claude Code tooling and agent skills for infrastructure as code, application deployment, and validation against acceptance criteria.</p>
+
+<h2>Experience</h2>
+
+<div class="role">
+  <span class="who">Platform Engineer <span class="co">| AppsFlyer (Mobile Marketing Analytics) | New York, NY</span></span>
+  <span class="when">2023 – Present</span>
+</div>
+<ul>
+  <li>Migrated 50+ Kubernetes applications from CI-driven Helm releases to pull-based GitOps on Argo CD, cutting configuration drift across environments.</li>
+  <li>Retired 60+ long-lived AWS keys by choosing repository-scoped OIDC over key rotation — CI/CD now holds no stored credentials.</li>
+  <li>Set the Prometheus and Grafana alerting standard for 25+ services on availability and error-rate signals, not thresholds that page when nothing is broken.</li>
+  <li>Cut monthly worker-node spend from $60K to $48K across eight Kubernetes clusters by right-sizing workloads and tuning Cluster Autoscaler.</li>
+  <li>Built 15+ Terraform modules adopted by four product teams, replacing two-to-three-day provisioning tickets with self-service environments in under 45 minutes.</li>
+  <li>Wrote Claude Code skills used across 20 repositories, generating Terraform from requirements and checking PRs against acceptance criteria.</li>
+</ul>
+
+<div class="role">
+  <span class="who">DevOps Engineer <span class="co">| HealthVerity (Healthcare Data Platform) | Philadelphia, PA / Remote</span></span>
+  <span class="when">2021 – 2023</span>
+</div>
+<ul>
+  <li>Replaced weekly manual release windows for 12 containerized services with GitHub Actions pipelines, enabling teams to deploy independently on demand.</li>
+  <li>Owned reliability for a healthcare-data pipeline processing two million events daily, making failed records visible and replayable through SQS and Lambda.</li>
+  <li>Automated patching and first-response diagnostics across 90+ Amazon Linux hosts, standardizing triage for a six-engineer on-call rotation.</li>
+  <li>Secured serverless services on Lambda and API Gateway by moving JWT verification into a shared authorizer rather than patching 10 routes individually.</li>
+</ul>
+
+<h2>Skills</h2>
+<div class="skills">
+<p><b>Cloud:</b> AWS (EC2, EKS, ECS/Fargate, Lambda, API Gateway, VPC, IAM, S3, RDS, DynamoDB, SQS, ECR, ALB, CloudWatch)</p>
+<p><b>Infrastructure:</b> Kubernetes, Docker, Helm, Terraform</p>
+<p><b>CI/CD:</b> GitHub Actions, reusable workflows, Argo CD</p>
+<p><b>Observability:</b> Prometheus, Grafana, CloudWatch</p>
+<p><b>Security:</b> GitHub Actions OIDC, IAM, AWS Secrets Manager, IRSA, Secrets Store CSI Driver, API Gateway authorizers, image scanning</p>
+<p><b>Systems:</b> Linux (Amazon Linux, Ubuntu), Bash</p>
+<p><b>AI Workflows:</b> Claude Code, custom agent skills</p>
+</div>
+
+<h2>Education</h2>
+<p class="edu">Bachelor of Arts, English Grammar and Literature, minor in Journalism — Ilia State University, Tbilisi, Georgia</p>
+
+</body>
+</html>
