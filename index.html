@@ -4,190 +4,222 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Tatia Razmadze — Platform Engineer</title>
-<meta name="description" content="Platform Engineer — AWS, Kubernetes, Terraform, CI/CD. What I run, and the evidence behind it.">
+<meta name="description" content="Platform Engineer in New York. AWS, Kubernetes, Terraform, GitOps. What I run, and the evidence behind it.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tatiarazmadze.com/">
+<meta property="og:title" content="Tatia Razmadze — Platform Engineer">
+<meta property="og:description" content="AWS, Kubernetes, Terraform, GitOps. What I run, and the evidence behind it.">
+<meta property="og:image" content="https://tatiarazmadze.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Tatia Razmadze — Platform Engineer">
+<meta name="twitter:description" content="AWS, Kubernetes, Terraform, GitOps. What I run, and the evidence behind it.">
+<meta name="twitter:image" content="https://tatiarazmadze.com/og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<header class="identity">
-  <h1>Tatia Razmadze</h1>
-  <p class="role">Platform Engineer</p>
-  <p class="blurb">
-    I build and run production AWS platforms — EKS, Terraform, GitOps delivery — for teams
-    that need to ship without filing a ticket. New York, NY.
-  </p>
-  <p class="seeking">Currently looking for a platform / infrastructure role.</p>
-  <nav class="links">
-    <a class="primary" href="resume.pdf">Resume (PDF)</a>
-    <a href="https://github.com/tatia-bit">GitHub</a>
-    <a href="https://www.linkedin.com/in/tatiarazmadze">LinkedIn</a>
-    <a href="mailto:tatiarazmadze.t@gmail.com">Email</a>
-  </nav>
-  <p class="deploy" id="deploy"><!--DEPLOY_STAMP--></p>
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="greeting">Hi, I&rsquo;m <b>Tatia Razmadze</b>.</p>
+      <h1>Platform<br>Engineer<span class="light">who runs the boring parts well</span></h1>
+      <p class="meta">
+        <span>New York, NY</span> <i>·</i> <span>AWS &amp; Kubernetes</span> <i>·</i> <span>Open to platform roles</span>
+      </p>
+      <p class="lede">
+        I build and run production AWS platforms — <strong>EKS, Terraform, GitOps delivery</strong> —
+        for teams that need to ship without filing a ticket. Everything below opens to the number
+        behind it.
+      </p>
+      <div class="actions">
+        <a class="pill" href="resume.pdf">Resume <span class="arr">&rarr;</span></a>
+        <a class="pill ghost" href="agent-log.html">The agent log</a>
+        <a class="pill ghost" href="mailto:tatiarazmadze.t@gmail.com">Email</a>
+      </div>
+    </div>
+
+    <aside>
+      <!-- portrait: drop an image here when ready
+      <figure class="portrait"><img src="tatia.jpg" alt="Tatia Razmadze"></figure>
+      -->
+      <div class="aside-card">
+        <dl>
+          <dt>Status</dt>
+          <dd><span class="live">open to platform roles</span></dd>
+          <dt>Based</dt>
+          <dd>New York, NY</dd>
+          <dt>Depth</dt>
+          <dd>5+ years across analytics and healthcare-data platforms</dd>
+          <dt>Elsewhere</dt>
+          <dd>
+            <a href="https://github.com/tatia-bit">GitHub</a> ·
+            <a href="https://www.linkedin.com/in/tatiarazmadze">LinkedIn</a>
+          </dd>
+        </dl>
+        <p class="deploy" id="deploy"><!--DEPLOY_STAMP--></p>
+      </div>
+    </aside>
+  </div>
 </header>
 
 <main>
 
 <section class="board">
-  <div class="board-head">
-    <h2>Components</h2>
-    <p class="rule">
-      A component is listed here only if it resolves to a specific number or a named
-      decision. No adjectives, no percentages of things I half-know. What I don&rsquo;t
-      claim isn&rsquo;t on this page.
+  <div class="wrap">
+    <p class="eyebrow">Components</p>
+    <p class="rule-note">
+      A component is listed here only if it resolves to a specific number or a named decision.
+      No adjectives, no percentages of things I half-know. What I don&rsquo;t claim isn&rsquo;t on this page.
     </p>
+
+    <div class="grid">
+
+      <details class="comp" open>
+        <summary><span class="comp-name">Kubernetes / EKS</span><span class="comp-metric">8 clusters, <em>25+ services</em></span></summary>
+        <div class="comp-body">
+          <p>Eight Amazon EKS clusters carrying 25+ services for four product teams — about 30 engineers depend on the platform day to day.</p>
+          <p>Health checks, autoscaling and rollback across environments; Helm charts with per-environment values.</p>
+        </div>
+      </details>
+
+      <details class="comp" open>
+        <summary><span class="comp-name">Delivery — GitOps</span><span class="comp-metric">50+ <em>Argo CD Applications</em></span></summary>
+        <div class="comp-body">
+          <p>Migrated 50+ Argo CD Applications across 25+ services from CI-driven Helm releases to pull-based GitOps, cutting configuration drift between environments.</p>
+          <p><b>Decision:</b> ApplicationSets rather than App-of-Apps. The same services ran across a matrix of environments and clusters, and templating that matrix with a generator was cheaper to maintain than a hand-nested tree.</p>
+        </div>
+      </details>
+
+      <details class="comp" open>
+        <summary><span class="comp-name">Infrastructure as code</span><span class="comp-metric">2&ndash;3 days <em>&rarr; 45 min</em></span></summary>
+        <div class="comp-body">
+          <p>15+ Terraform modules adopted by four product teams, covering EKS, VPC, IAM, ECR and RDS.</p>
+          <p>Provisioning that used to be a two-to-three-day ticket became a self-service environment in under 45 minutes.</p>
+        </div>
+      </details>
+
+      <details class="comp" open>
+        <summary><span class="comp-name">Security</span><span class="comp-metric">60+ keys <em>&rarr; zero</em></span></summary>
+        <div class="comp-body">
+          <p><b>Decision:</b> retired 60+ long-lived AWS keys by moving CI/CD to repository-scoped OIDC rather than rotating them. Rotation keeps the credential and only changes its value; short-lived OIDC sessions mean CI/CD holds no stored credential at all.</p>
+          <p><b>Decision:</b> ten API Gateway routes were decoding JWTs without verifying them. Verification moved into one shared authorizer instead of patching ten routes — one place to get right, and no route can quietly miss the fix later.</p>
+        </div>
+      </details>
+
+      <details class="comp" open>
+        <summary><span class="comp-name">Cost</span><span class="comp-metric">$60K <em>&rarr; $48K / mo</em></span></summary>
+        <div class="comp-body">
+          <p>Monthly worker-node spend across eight clusters, measured in AWS Cost Explorer filtered to EKS worker nodes.</p>
+          <p>Right-sizing over-requested workloads and tuning Cluster Autoscaler so idle nodes could terminate without breaching minimum capacity — then watching utilization and cost afterwards so it didn&rsquo;t drift back.</p>
+        </div>
+      </details>
+
+      <details class="comp" open>
+        <summary><span class="comp-name">Observability</span><span class="comp-metric">under <em>2 minutes</em> to detect</span></summary>
+        <div class="comp-body">
+          <p><b>Decision:</b> set the Prometheus and Grafana alerting standard for 25+ services on availability and error-rate signals rather than static thresholds — thresholds page when nothing is broken, and an alert nobody trusts is worse than no alert.</p>
+          <p>Crash loops, OOM kills and elevated 5xx rates surface in under two minutes.</p>
+        </div>
+      </details>
+
+      <details class="comp" open>
+        <summary><span class="comp-name">Event pipelines</span><span class="comp-metric">2M events <em>/ day</em></span></summary>
+        <div class="comp-body">
+          <p>Owned reliability for a healthcare-data pipeline processing two million events daily.</p>
+          <p><b>Decision:</b> failed records went to dead-letter queues with partial-batch retries and CloudWatch alarms, so a bad record became something you could see and replay rather than something that vanished. Detection went from 30 minutes to under five.</p>
+        </div>
+      </details>
+
+      <details class="comp" open>
+        <summary><span class="comp-name">CI/CD</span><span class="comp-metric">under <em>15 min</em> to deploy</span></summary>
+        <div class="comp-body">
+          <p>GitHub Actions with reusable workflows; repeatable deploys with automated health checks and rollback.</p>
+          <p>Earlier: replaced weekly manual release windows for 12 containerized services with pipelines that test, scan images, publish to ECR and deploy — so teams released on their own schedule instead of waiting for a window.</p>
+        </div>
+      </details>
+
+      <details class="comp" open>
+        <summary><span class="comp-name">Linux</span><span class="comp-metric">90+ <em>hosts</em></span></summary>
+        <div class="comp-body">
+          <p>Patching and first-response diagnostics automated in Bash across 90+ Amazon Linux hosts, standardizing triage for a six-engineer on-call rotation.</p>
+        </div>
+      </details>
+
+      <details class="comp" open>
+        <summary><span class="comp-name">Agent tooling</span><span class="comp-metric">20 <em>repositories</em></span></summary>
+        <div class="comp-body">
+          <p>Claude Code skills I wrote, used across 20 repositories — roughly 15 application repos and 5 shared platform repos — generating Terraform from requirements and checking pull requests against acceptance criteria. They advise; a human still approves.</p>
+          <p><b>Decision:</b> <code>rds-terraform-provisioner</code> refuses off-the-shelf modules outright, asks before guessing on anything security-shaped, and carries a Gotchas section seeded from failures I actually hit — including <code>publicly_accessible</code> defaulting to true when requirements go quiet.</p>
+          <p class="linkline"><a href="agent-log.html">Read the agent log &rarr;</a></p>
+        </div>
+      </details>
+
+    </div>
   </div>
-
-  <details open>
-    <summary><span class="name">Kubernetes / EKS</span><span class="metric">8 clusters</span></summary>
-    <div class="detail">
-      <p>Eight Amazon EKS clusters carrying 25+ services for four product teams — about 30 engineers
-      depend on the platform day to day.</p>
-      <p>Health checks, autoscaling and rollback across environments; Helm charts with per-environment values.</p>
-    </div>
-  </details>
-
-  <details open>
-    <summary><span class="name">Delivery — GitOps</span><span class="metric">50+ Applications</span></summary>
-    <div class="detail">
-      <p>Migrated 50+ Argo CD Applications across 25+ services from CI-driven Helm releases to
-      pull-based GitOps, which cut configuration drift between environments.</p>
-      <p><strong>Decision:</strong> ApplicationSets rather than App-of-Apps. The same services ran across a
-      matrix of environments and clusters, and templating that matrix with a generator was cheaper to
-      maintain than a hand-nested tree of applications.</p>
-    </div>
-  </details>
-
-  <details open>
-    <summary><span class="name">Infrastructure as code</span><span class="metric">2&ndash;3 days &rarr; 45 min</span></summary>
-    <div class="detail">
-      <p>15+ Terraform modules adopted by four product teams, covering EKS, VPC, IAM, ECR and RDS.</p>
-      <p>Provisioning that used to be a two-to-three-day ticket became a self-service environment in
-      under 45 minutes.</p>
-    </div>
-  </details>
-
-  <details open>
-    <summary><span class="name">CI/CD</span><span class="metric">&lt; 15 min deploys</span></summary>
-    <div class="detail">
-      <p>GitHub Actions with reusable workflows; repeatable deploys in under 15 minutes with automated
-      health checks and rollback.</p>
-      <p>Earlier, at HealthVerity: replaced weekly manual release windows for 12 containerized services
-      with pipelines that test, scan images, publish to ECR and deploy — so teams could release on
-      their own schedule instead of waiting for a window.</p>
-    </div>
-  </details>
-
-  <details open>
-    <summary><span class="name">Security</span><span class="metric">60+ keys &rarr; 0</span></summary>
-    <div class="detail">
-      <p><strong>Decision:</strong> retired 60+ long-lived AWS keys by moving CI/CD to repository-scoped
-      OIDC rather than rotating them. Rotation keeps the credential and just changes its value;
-      short-lived OIDC sessions mean CI/CD holds no stored credential at all.</p>
-      <p><strong>Decision:</strong> ten API Gateway routes were decoding JWTs without verifying them.
-      Verification moved into one shared authorizer instead of patching ten routes — one place to get
-      right, and no route can quietly miss the fix later.</p>
-    </div>
-  </details>
-
-  <details open>
-    <summary><span class="name">Observability</span><span class="metric">&lt; 2 min detection</span></summary>
-    <div class="detail">
-      <p><strong>Decision:</strong> set the Prometheus and Grafana alerting standard for 25+ services on
-      availability and error-rate signals rather than static thresholds — thresholds page when nothing
-      is broken, and an alert nobody trusts is worse than no alert.</p>
-      <p>Crash loops, OOM kills and elevated 5xx rates surface in under two minutes.</p>
-    </div>
-  </details>
-
-  <details open>
-    <summary><span class="name">Event pipelines</span><span class="metric">2M events/day</span></summary>
-    <div class="detail">
-      <p>Owned reliability for a healthcare-data pipeline processing two million events daily.</p>
-      <p><strong>Decision:</strong> failed records went to dead-letter queues with partial-batch retries
-      and CloudWatch alarms, so a bad record became something you could see and replay rather than
-      something that vanished. Detection went from 30 minutes to under five.</p>
-    </div>
-  </details>
-
-  <details open>
-    <summary><span class="name">Linux</span><span class="metric">90+ hosts</span></summary>
-    <div class="detail">
-      <p>Patching and first-response diagnostics automated in Bash across 90+ Amazon Linux hosts,
-      standardizing triage for a six-engineer on-call rotation.</p>
-    </div>
-  </details>
-
-  <details open>
-    <summary><span class="name">Cost</span><span class="metric">$60K &rarr; $48K / mo</span></summary>
-    <div class="detail">
-      <p>Monthly worker-node spend across eight clusters went from about $60K to about $48K, measured in
-      AWS Cost Explorer filtered to EKS worker nodes.</p>
-      <p>It came from right-sizing over-requested workloads and tuning Cluster Autoscaler so idle nodes
-      could terminate without breaching minimum capacity — then watching utilization and cost afterwards
-      so it didn&rsquo;t drift back.</p>
-    </div>
-  </details>
-
-  <details open>
-    <summary><span class="name">Agent tooling</span><span class="metric">20 repositories</span></summary>
-    <div class="detail">
-      <p>Claude Code skills I wrote, used across 20 repositories — roughly 15 application repos and 5
-      shared platform repos — generating Terraform from requirements and checking pull requests against
-      acceptance criteria. They advise; a human still approves.</p>
-      <p><strong>Decision:</strong> <code>rds-terraform-provisioner</code> refuses off-the-shelf modules
-      outright, asks before guessing on anything security-shaped, and carries a Gotchas section seeded
-      from failures I actually hit — including <code>publicly_accessible</code> defaulting to true when
-      requirements go quiet.</p>
-      <p class="more"><a href="agent-log.html">Read the agent log &rarr;</a></p>
-    </div>
-  </details>
 </section>
 
 <section class="changelog">
-  <h2>Changelog</h2>
+  <div class="wrap">
+    <p class="eyebrow">Changelog</p>
 
-  <article>
-    <div class="entry-head">
-      <span class="org">AppsFlyer</span>
-      <span class="title">Platform Engineer</span>
-      <span class="dates">2023 &ndash; present</span>
-    </div>
-    <p>Mobile marketing analytics. Own an EKS platform used by four product teams. Moved delivery to
-    pull-based GitOps, took stored credentials out of CI/CD, set the alerting standard, and brought
-    provisioning down from a multi-day ticket to a self-service run.</p>
-  </article>
+    <article class="entry">
+      <div class="when">2023 &ndash; present</div>
+      <div>
+        <h3>AppsFlyer</h3>
+        <p class="what">Platform Engineer · Mobile marketing analytics · New York</p>
+        <p>Own an EKS platform used by four product teams and about 30 engineers.</p>
+        <p><b>Moved delivery to GitOps.</b> 50+ Argo CD Applications off CI-driven Helm releases, which ended the configuration drift between environments.</p>
+        <p><b>Took stored credentials out of CI/CD entirely.</b> 60+ long-lived AWS keys retired in favour of repository-scoped OIDC.</p>
+        <p><b>Made provisioning self-service.</b> 15+ Terraform modules turned a two-to-three-day ticket into a 45-minute run teams do themselves.</p>
+        <p><b>Set the alerting standard.</b> 25+ services alerting on availability and error rates rather than thresholds, with failures surfacing in under two minutes.</p>
+        <p><b>Cut compute spend 20%.</b> $60K to $48K a month, by right-sizing workloads and tuning Cluster Autoscaler.</p>
+      </div>
+    </article>
 
-  <article>
-    <div class="entry-head">
-      <span class="org">HealthVerity</span>
-      <span class="title">DevOps Engineer</span>
-      <span class="dates">2021 &ndash; 2023</span>
-    </div>
-    <p>Healthcare data platform. Replaced manual weekly release windows with pipelines teams could run
-    themselves, made a two-million-events-a-day ingestion path observable and replayable, and
-    consolidated JWT verification that ten routes had been skipping.</p>
-  </article>
+    <article class="entry">
+      <div class="when">2021 &ndash; 2023</div>
+      <div>
+        <h3>HealthVerity</h3>
+        <p class="what">DevOps Engineer · Healthcare data platform · Philadelphia / Remote</p>
+        <p>First platform role — where making things work became making them repeatable.</p>
+        <p><b>Ended the weekly release window.</b> 12 containerized services moved onto GitHub Actions pipelines, so teams deployed on their own schedule.</p>
+        <p><b>Made a two-million-event-a-day pipeline recoverable.</b> Dead-letter queues, partial-batch retries and alarms turned vanished records into replayable ones; detection went from 30 minutes to under five.</p>
+        <p><b>Fixed authentication ten routes had been skipping.</b> JWT verification consolidated into one shared API Gateway authorizer instead of ten separate patches.</p>
+        <p><b>Automated a 90+ host fleet.</b> Patching and first-response diagnostics in Bash, standardizing triage for a six-engineer on-call rotation.</p>
+      </div>
+    </article>
+
+  </div>
 </section>
 
 <section class="colophon">
-  <h2>How this site is built</h2>
-  <p>Static HTML and CSS, no framework and no build step, served from GitHub Pages. Components are
-  <code>&lt;details&gt;</code> elements that ship open and are collapsed by about ten lines of
-  JavaScript — so with JavaScript disabled or broken, this page is a complete document rather than a
-  row of empty boxes.</p>
-  <p>The deploy line at the top is the only live thing here: the commit and timestamp are written in by
-  the GitHub Actions workflow that publishes the page. Nothing else on this page has
-  a status indicator, because nothing else is being measured — a green dot I wasn&rsquo;t measuring
-  would be a fake instrument.</p>
-  <p><a href="https://github.com/tatia-bit/tatiarazmadze.com">Source for this site &rarr;</a></p>
+  <div class="wrap">
+    <div class="inner">
+      <p class="eyebrow">How this site is built</p>
+      <p>Static HTML and CSS, no framework and no build step, served from GitHub Pages. Components are
+      <code>&lt;details&gt;</code> elements that ship open and are collapsed by six lines of JavaScript —
+      so with JavaScript disabled or broken, this page is a complete document rather than a row of empty boxes.</p>
+      <p>The deploy line is the only live thing here: the commit and timestamp are written in by the
+      GitHub Actions workflow that publishes the page. Nothing else carries a status indicator, because
+      nothing else is being measured — a green dot I wasn&rsquo;t measuring would be a fake instrument.</p>
+      <p><a href="https://github.com/tatia-bit/tatiarazmadze.com">Source for this site &rarr;</a></p>
+    </div>
+  </div>
 </section>
 
 </main>
 
 <footer>
-  <p><a href="resume.pdf">Resume (PDF)</a> · <a href="mailto:tatiarazmadze.t@gmail.com">tatiarazmadze.t@gmail.com</a> ·
-  <a href="https://github.com/tatia-bit">GitHub</a> · <a href="https://www.linkedin.com/in/tatiarazmadze">LinkedIn</a></p>
+  <div class="wrap">
+    <a href="resume.pdf">Resume (PDF)</a>
+    <a href="mailto:tatiarazmadze.t@gmail.com">tatiarazmadze.t@gmail.com</a>
+    <a href="https://github.com/tatia-bit">GitHub</a>
+    <a href="https://www.linkedin.com/in/tatiarazmadze">LinkedIn</a>
+  </div>
 </footer>
 
 <script src="app.js"></script>

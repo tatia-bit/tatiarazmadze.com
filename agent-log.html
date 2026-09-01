@@ -5,78 +5,103 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The Agent Log — Tatia Razmadze</title>
 <meta name="description" content="The tool was wrong. Here's how I caught it — reviewing agent output on infrastructure pull requests.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://tatiarazmadze.com/agent-log.html">
+<meta property="og:title" content="The tool was wrong. Here's how I caught it.">
+<meta property="og:description" content="Reviewing agent output on infrastructure pull requests — including the time it was confidently wrong.">
+<meta property="og:image" content="https://tatiarazmadze.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://tatiarazmadze.com/og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<header class="identity">
-  <p><a class="back" href="./">&larr; Tatia Razmadze</a></p>
-  <h1>The tool was wrong. Here&rsquo;s how I caught it.</h1>
-  <p class="log-lede">
-    I write Claude Code skills that review infrastructure pull requests across 20 repositories.
-    They advise; a human still approves. This page is about the part that matters — what happens
-    when the tool is confidently wrong, and you have to be the one who knows.
-  </p>
+<header class="log-head">
+  <div class="wrap">
+    <p><a class="back" href="./">&larr; Tatia Razmadze</a></p>
+    <h1>The tool was wrong.<span class="light">Here&rsquo;s how I caught it.</span></h1>
+    <p class="log-lede">
+      I write Claude Code skills that review infrastructure pull requests across 20 repositories.
+      They advise; a human still approves. This page is about the part that matters — what happens
+      when the tool is confidently wrong, and you have to be the one who knows.
+    </p>
+  </div>
 </header>
 
 <main>
 
-<section>
-  <h2>The finding</h2>
-  <p>The tooling flagged an IAM policy in a pull request: <code>Resource = "*"</code>, marked as
-  overbroad. On its face that is exactly the kind of thing you want a reviewer to catch — a wildcard
-  resource in a permissions policy is usually a real problem, and it is the single most common
-  finding in any IAM linting tool.</p>
-  <p>It was wrong here. The AWS action in that statement does not support resource-level permissions
-  at all. For actions like that, <code>"*"</code> is not a shortcut or a lazy default — it is the only
-  value the service accepts. Narrowing it would not have made the policy safer; it would have made it
-  invalid.</p>
-</section>
-
-<section>
-  <h2>What I did about it</h2>
-  <p>I checked the service authorization reference for that action rather than arguing with the tool
-  from memory, and confirmed it takes no resource-level scoping. Then I looked at what was actually
-  containing the blast radius — the OIDC trust conditions around the role, which scope who can assume
-  it and from where. That is where the real boundary lived, and it was already tight.</p>
-  <p>So I dismissed the finding, and I wrote down why. Not &ldquo;false positive&rdquo; — the actual
-  reason, in the pull request, so the next person who sees the same flag on the same action does not
-  have to redo the research.</p>
-  <div class="note">
-    <p>This is the whole argument for keeping a human as the final gate. The tool was not
-    malfunctioning — it applied a good general rule. Knowing that the rule does not apply to this
-    action is the part that has to come from someone who understands the service, and it is not
-    something you can prompt your way to.</p>
+<section class="log-section">
+  <div class="wrap">
+    <h2>The finding</h2>
+    <p>The tooling flagged an IAM policy in a pull request: <code>Resource = "*"</code>, marked as
+    overbroad. On its face that is exactly what you want a reviewer to catch — a wildcard resource in
+    a permissions policy is usually a real problem, and it is the single most common finding in any
+    IAM linting tool.</p>
+    <p>It was wrong here. The AWS action in that statement does not support resource-level permissions
+    at all. For actions like that, <code>"*"</code> is not a shortcut or a lazy default — it is the
+    only value the service accepts. Narrowing it would not have made the policy safer; it would have
+    made it invalid.</p>
   </div>
 </section>
 
-<section>
-  <h2>The other direction</h2>
-  <p>The same tooling caught something a human review would probably have passed. A change created an
-  RDS instance in valid, working Terraform — but never explicitly disabled
-  <code>publicly_accessible</code>, against a standard that required private access. Nothing was
-  syntactically wrong. The requirement simply was not expressed anywhere in the code, and the default
-  is not the safe one.</p>
-  <p>That gap is why my <code>rds-terraform-provisioner</code> skill carries a Gotchas section listing
-  <code>publicly_accessible</code> defaulting to true when requirements go quiet. I hit it, so I
-  encoded it. The skill also refuses off-the-shelf modules outright and asks rather than guesses on
-  anything security-shaped — assume-and-flag is fine for the rest.</p>
+<section class="log-section">
+  <div class="wrap">
+    <h2>What I did about it</h2>
+    <p>I checked the service authorization reference for that action rather than arguing with the tool
+    from memory, and confirmed it takes no resource-level scoping. Then I looked at what was actually
+    containing the blast radius — the OIDC trust conditions around the role, which scope who can assume
+    it and from where. That is where the real boundary lived, and it was already tight.</p>
+    <p>So I dismissed the finding, and I wrote down why. Not &ldquo;false positive&rdquo; — the actual
+    reason, in the pull request, so the next person who sees the same flag on the same action does not
+    have to redo the research.</p>
+    <div class="pull">
+      <p>This is the whole argument for keeping a human as the final gate. The tool was not
+      malfunctioning — it applied a good general rule. Knowing that the rule does not apply to this
+      action is the part that has to come from someone who understands the service, and it is not
+      something you can prompt your way to.</p>
+    </div>
+  </div>
 </section>
 
-<section>
-  <h2>What I actually think this is worth</h2>
-  <p>Reviewing work you did not write is an ordinary engineering skill and it is the one that agentic
-  tooling makes load-bearing. The interesting question in an interview is not whether I use these
-  tools. It is whether I can tell you about a time one of them was wrong, what it cost to find out,
-  and what I changed afterwards.</p>
-  <p>Those are the two cases above: one where it was right and a human would have missed it, one where
-  it was wrong and only knowing the service saved the change.</p>
+<section class="log-section">
+  <div class="wrap">
+    <h2>The other direction</h2>
+    <p>The same tooling caught something a human review would probably have passed. A change created an
+    RDS instance in valid, working Terraform — but never explicitly disabled
+    <code>publicly_accessible</code>, against a standard that required private access. Nothing was
+    syntactically wrong. The requirement simply was not expressed anywhere in the code, and the default
+    is not the safe one.</p>
+    <p>That gap is why my <code>rds-terraform-provisioner</code> skill carries a Gotchas section listing
+    <code>publicly_accessible</code> defaulting to true when requirements go quiet. <b>I hit it, so I
+    encoded it.</b> The skill also refuses off-the-shelf modules outright and asks rather than guesses
+    on anything security-shaped — assume-and-flag is fine for the rest.</p>
+  </div>
+</section>
+
+<section class="log-section">
+  <div class="wrap">
+    <h2>What I think this is actually worth</h2>
+    <p>Reviewing work you did not write is an ordinary engineering skill, and it is the one that agentic
+    tooling makes load-bearing. The interesting question in an interview is not whether I use these
+    tools. It is whether I can tell you about a time one of them was wrong, what it cost to find out,
+    and what I changed afterwards.</p>
+    <p>Those are the two cases above: one where it was right and a human would have missed it, one where
+    it was wrong and only knowing the service saved the change.</p>
+  </div>
 </section>
 
 <section class="colophon">
-  <p><a href="./">&larr; Back to components</a> &nbsp;·&nbsp;
-  <a href="resume.pdf">Resume (PDF)</a> &nbsp;·&nbsp;
-  <a href="mailto:tatiarazmadze.t@gmail.com">tatiarazmadze.t@gmail.com</a></p>
+  <div class="wrap">
+    <div class="inner">
+      <p><a href="./">&larr; Back to components</a> &nbsp;·&nbsp;
+      <a href="resume.pdf">Resume (PDF)</a> &nbsp;·&nbsp;
+      <a href="mailto:tatiarazmadze.t@gmail.com">tatiarazmadze.t@gmail.com</a></p>
+    </div>
+  </div>
 </section>
 
 </main>
