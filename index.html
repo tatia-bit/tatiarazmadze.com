@@ -22,31 +22,39 @@
 </head>
 <body>
 
+<nav class="topnav">
+  <div class="wrap">
+    <a href="#components">Components</a>
+    <a href="#changelog">Changelog</a>
+    <a href="agent-log.html">Agent log</a>
+    <a href="#built">How it&rsquo;s built</a>
+    <a href="resume.pdf">Resume</a>
+    <a href="mailto:tatiarazmadze.t@gmail.com">Contact</a>
+  </div>
+</nav>
+
 <header class="hero">
   <div class="wrap hero-grid">
-    <div>
+    <div class="hero-text">
       <p class="nameplate">Tatia Razmadze</p>
-      <h1>Platform<br>Engineer<span class="light">who runs the boring parts well</span></h1>
+      <h1><span class="caps">Platform</span><span class="amp">&amp; DevOps</span><span class="caps">Engineer</span></h1>
       <p class="meta">
         <span>New York, NY</span> <i>·</i> <span>AWS &amp; Kubernetes</span> <i>·</i> <span>Open to platform roles</span>
       </p>
       <p class="lede">
-        I build and run production AWS platforms — <strong>EKS, Terraform, GitOps delivery</strong> —
-        for teams that need to ship without filing a ticket. Everything below opens to the number
-        behind it.
+        I build and run production AWS platforms &mdash; <strong>EKS, Terraform, GitOps delivery</strong> &mdash;
+        for teams that need to ship without filing a ticket. Everything below opens to the number behind it.
       </p>
       <div class="actions">
-        <a class="pill" href="resume.pdf">Resume <span class="arr">&rarr;</span></a>
-        <a class="pill ghost" href="agent-log.html">The agent log</a>
-        <a class="pill ghost" href="mailto:tatiarazmadze.t@gmail.com">Email</a>
+        <a class="pill big" href="resume.pdf">Resume <span class="circ">&rarr;</span></a>
+        <a class="quiet" href="agent-log.html">or read the agent log</a>
       </div>
     </div>
 
-    <aside>
-      <!-- portrait: drop an image here when ready
-      <figure class="portrait"><img src="tatia.jpg" alt="Tatia Razmadze"></figure>
-      -->
-      <div class="aside-card">
+    <aside class="hero-aside">
+      <!-- PHOTO: when the headshot is ready, replace this whole .arch block with:
+           <figure class="arch"><img src="tatia.jpg" alt="Tatia Razmadze"></figure> -->
+      <div class="arch arch-card">
         <dl>
           <dt>Status</dt>
           <dd><span class="live">open to platform roles</span></dd>
@@ -68,7 +76,7 @@
 
 <main>
 
-<section class="board">
+<section class="board" id="components">
   <div class="wrap">
     <p class="eyebrow">Components</p>
     <p class="rule-note">
@@ -162,7 +170,7 @@
   </div>
 </section>
 
-<section class="changelog">
+<section class="changelog" id="changelog">
   <div class="wrap">
     <p class="eyebrow">Changelog</p>
 
@@ -196,7 +204,7 @@
   </div>
 </section>
 
-<section class="colophon">
+<section class="colophon" id="built">
   <div class="wrap">
     <div class="inner">
       <p class="eyebrow">How this site is built</p>
