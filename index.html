@@ -4,16 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Tatia Razmadze — Platform Engineer</title>
-<meta name="description" content="Platform Engineer in New York. AWS, Kubernetes, Terraform, GitOps. What I run, and the evidence behind it.">
+<meta name="description" content="Platform Engineer in New York. AWS, Kubernetes, Terraform, GitOps delivery.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://tatiarazmadze.com/">
 <meta property="og:title" content="Tatia Razmadze — Platform Engineer">
-<meta property="og:description" content="AWS, Kubernetes, Terraform, GitOps. What I run, and the evidence behind it.">
+<meta property="og:description" content="AWS, Kubernetes, Terraform, GitOps. Nobody should have to think about the platform.">
 <meta property="og:image" content="https://tatiarazmadze.com/og.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Tatia Razmadze — Platform Engineer">
-<meta name="twitter:description" content="AWS, Kubernetes, Terraform, GitOps. What I run, and the evidence behind it.">
 <meta name="twitter:image" content="https://tatiarazmadze.com/og.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,214 +20,187 @@
 </head>
 <body>
 
-<nav class="topnav">
-  <div class="wrap">
-    <a href="#components">Components</a>
-    <a href="#changelog">Changelog</a>
-    <a href="agent-log.html">Agent log</a>
-    <a href="#built">How it&rsquo;s built</a>
-    <a href="resume.pdf">Resume</a>
-    <a href="mailto:tatiarazmadze.t@gmail.com">Contact</a>
-  </div>
-</nav>
+<div class="sheet">
 
-<header class="hero">
-  <div class="wrap hero-grid">
+  <nav class="topnav">
+    <div class="navlinks">
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
     <div class="hero-text">
-      <p class="nameplate">Tatia Razmadze</p>
-      <h1><span class="caps">Platform</span><span class="amp">&amp; DevOps</span><span class="caps">Engineer</span></h1>
+      <h1>Tatia <span class="hl">Razmadze</span><span class="role">Platform &amp; DevOps Engineer</span></h1>
       <p class="meta">
-        <span>New York, NY</span> <i>·</i> <span>AWS &amp; Kubernetes</span> <i>·</i> <span>Open to platform roles</span>
-      </p>
-      <p class="lede">
-        I build and run production AWS platforms &mdash; <strong>EKS, Terraform, GitOps delivery</strong> &mdash;
-        for teams that need to ship without filing a ticket. Everything below opens to the number behind it.
+        <span>New York, NY</span> <i>·</i> <span>Remote or hybrid</span> <i>·</i> <span>Open to platform roles</span>
       </p>
       <div class="actions">
-        <a class="pill big" href="resume.pdf">Resume <span class="circ">&rarr;</span></a>
-        <a class="quiet" href="agent-log.html">or read the agent log</a>
+        <a class="btn" href="#contact">Contact</a>
+        <a class="btn ghost" href="resume.pdf">Resume</a>
+      </div>
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/tatiarazmadze" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.76-1.95C20.3 8.75 21 11 21 14.1V21h-4v-6.1c0-1.45-.03-3.3-2.02-3.3-2.02 0-2.33 1.58-2.33 3.2V21H9z"/></svg>
+        </a>
+        <a href="https://github.com/tatia-bit" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 .5a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2.2c-3.34.72-4.04-1.42-4.04-1.42-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.34-5.47-5.96 0-1.32.47-2.4 1.24-3.24-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6.01 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.25 2.88.12 3.18.77.84 1.23 1.92 1.23 3.24 0 4.63-2.8 5.65-5.48 5.95.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58A12 12 0 0 0 12 .5z"/></svg>
+        </a>
+        <a href="mailto:tatiarazmadze.t@gmail.com" aria-label="Email">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M2 5.5A1.5 1.5 0 0 1 3.5 4h17A1.5 1.5 0 0 1 22 5.5v.3l-10 5.7L2 5.8zM2 8.1l9.5 5.4c.3.2.7.2 1 0L22 8.1V18.5a1.5 1.5 0 0 1-1.5 1.5h-17A1.5 1.5 0 0 1 2 18.5z"/></svg>
+        </a>
       </div>
     </div>
 
-    <aside class="hero-aside">
-      <!-- PHOTO: when the headshot is ready, replace this whole .arch block with:
-           <figure class="arch"><img src="tatia.jpg" alt="Tatia Razmadze"></figure> -->
-      <div class="arch arch-card">
-        <dl>
-          <dt>Status</dt>
-          <dd><span class="live">open to platform roles</span></dd>
-          <dt>Based</dt>
-          <dd>New York, NY</dd>
-          <dt>Depth</dt>
-          <dd>5+ years across analytics and healthcare-data platforms</dd>
-          <dt>Elsewhere</dt>
-          <dd>
-            <a href="https://github.com/tatia-bit">GitHub</a> ·
-            <a href="https://www.linkedin.com/in/tatiarazmadze">LinkedIn</a>
-          </dd>
-        </dl>
-        <p class="deploy" id="deploy"><!--DEPLOY_STAMP--></p>
-      </div>
-    </aside>
-  </div>
-</header>
-
-<main>
-
-<section class="board" id="components">
-  <div class="wrap">
-    <p class="eyebrow">Components</p>
-    <p class="rule-note">
-      A component is listed here only if it resolves to a specific number or a named decision.
-      No adjectives, no percentages of things I half-know. What I don&rsquo;t claim isn&rsquo;t on this page.
-    </p>
-
-    <div class="grid">
-
-      <details class="comp" open>
-        <summary><span class="comp-name">Kubernetes / EKS</span><span class="comp-metric">8 clusters, <em>25+ services</em></span></summary>
-        <div class="comp-body">
-          <p>Eight Amazon EKS clusters carrying 25+ services for four product teams — about 30 engineers depend on the platform day to day.</p>
-          <p>Health checks, autoscaling and rollback across environments; Helm charts with per-environment values.</p>
-        </div>
-      </details>
-
-      <details class="comp" open>
-        <summary><span class="comp-name">Delivery — GitOps</span><span class="comp-metric">50+ <em>Argo CD Applications</em></span></summary>
-        <div class="comp-body">
-          <p>Migrated 50+ Argo CD Applications across 25+ services from CI-driven Helm releases to pull-based GitOps, cutting configuration drift between environments.</p>
-          <p><b>Decision:</b> ApplicationSets rather than App-of-Apps. The same services ran across a matrix of environments and clusters, and templating that matrix with a generator was cheaper to maintain than a hand-nested tree.</p>
-        </div>
-      </details>
-
-      <details class="comp" open>
-        <summary><span class="comp-name">Infrastructure as code</span><span class="comp-metric">2&ndash;3 days <em>&rarr; 45 min</em></span></summary>
-        <div class="comp-body">
-          <p>15+ Terraform modules adopted by four product teams, covering EKS, VPC, IAM, ECR and RDS.</p>
-          <p>Provisioning that used to be a two-to-three-day ticket became a self-service environment in under 45 minutes.</p>
-        </div>
-      </details>
-
-      <details class="comp" open>
-        <summary><span class="comp-name">Security</span><span class="comp-metric">60+ keys <em>&rarr; zero</em></span></summary>
-        <div class="comp-body">
-          <p><b>Decision:</b> retired 60+ long-lived AWS keys by moving CI/CD to repository-scoped OIDC rather than rotating them. Rotation keeps the credential and only changes its value; short-lived OIDC sessions mean CI/CD holds no stored credential at all.</p>
-          <p><b>Decision:</b> ten API Gateway routes were decoding JWTs without verifying them. Verification moved into one shared authorizer instead of patching ten routes — one place to get right, and no route can quietly miss the fix later.</p>
-        </div>
-      </details>
-
-      <details class="comp" open>
-        <summary><span class="comp-name">Cost</span><span class="comp-metric">$60K <em>&rarr; $48K / mo</em></span></summary>
-        <div class="comp-body">
-          <p>Monthly worker-node spend across eight clusters, measured in AWS Cost Explorer filtered to EKS worker nodes.</p>
-          <p>Right-sizing over-requested workloads and tuning Cluster Autoscaler so idle nodes could terminate without breaching minimum capacity — then watching utilization and cost afterwards so it didn&rsquo;t drift back.</p>
-        </div>
-      </details>
-
-      <details class="comp" open>
-        <summary><span class="comp-name">Observability</span><span class="comp-metric">under <em>2 minutes</em> to detect</span></summary>
-        <div class="comp-body">
-          <p><b>Decision:</b> set the Prometheus and Grafana alerting standard for 25+ services on availability and error-rate signals rather than static thresholds — thresholds page when nothing is broken, and an alert nobody trusts is worse than no alert.</p>
-          <p>Crash loops, OOM kills and elevated 5xx rates surface in under two minutes.</p>
-        </div>
-      </details>
-
-      <details class="comp" open>
-        <summary><span class="comp-name">Event pipelines</span><span class="comp-metric">2M events <em>/ day</em></span></summary>
-        <div class="comp-body">
-          <p>Owned reliability for a healthcare-data pipeline processing two million events daily.</p>
-          <p><b>Decision:</b> failed records went to dead-letter queues with partial-batch retries and CloudWatch alarms, so a bad record became something you could see and replay rather than something that vanished. Detection went from 30 minutes to under five.</p>
-        </div>
-      </details>
-
-      <details class="comp" open>
-        <summary><span class="comp-name">CI/CD</span><span class="comp-metric">under <em>15 min</em> to deploy</span></summary>
-        <div class="comp-body">
-          <p>GitHub Actions with reusable workflows; repeatable deploys with automated health checks and rollback.</p>
-          <p>Earlier: replaced weekly manual release windows for 12 containerized services with pipelines that test, scan images, publish to ECR and deploy — so teams released on their own schedule instead of waiting for a window.</p>
-        </div>
-      </details>
-
-      <details class="comp" open>
-        <summary><span class="comp-name">Linux</span><span class="comp-metric">90+ <em>hosts</em></span></summary>
-        <div class="comp-body">
-          <p>Patching and first-response diagnostics automated in Bash across 90+ Amazon Linux hosts, standardizing triage for a six-engineer on-call rotation.</p>
-        </div>
-      </details>
-
-      <details class="comp" open>
-        <summary><span class="comp-name">Agent tooling</span><span class="comp-metric">20 <em>repositories</em></span></summary>
-        <div class="comp-body">
-          <p>Claude Code skills I wrote, used across 20 repositories — roughly 15 application repos and 5 shared platform repos — generating Terraform from requirements and checking pull requests against acceptance criteria. They advise; a human still approves.</p>
-          <p><b>Decision:</b> <code>rds-terraform-provisioner</code> refuses off-the-shelf modules outright, asks before guessing on anything security-shaped, and carries a Gotchas section seeded from failures I actually hit — including <code>publicly_accessible</code> defaulting to true when requirements go quiet.</p>
-          <p class="linkline"><a href="agent-log.html">Read the agent log &rarr;</a></p>
-        </div>
-      </details>
-
+    <div class="hero-art">
+      <div class="blob"><img src="tatia.jpg" alt="Tatia Razmadze" width="800" height="800"></div>
     </div>
-  </div>
-</section>
+  </header>
 
-<section class="changelog" id="changelog">
-  <div class="wrap">
-    <p class="eyebrow">Changelog</p>
+  <main>
 
-    <article class="entry">
-      <div class="when">2023 &ndash; present</div>
-      <div>
-        <h3>AppsFlyer</h3>
-        <p class="what">Platform Engineer · Mobile marketing analytics · New York</p>
-        <p>Own an EKS platform used by four product teams and about 30 engineers.</p>
-        <p><b>Moved delivery to GitOps.</b> 50+ Argo CD Applications off CI-driven Helm releases, which ended the configuration drift between environments.</p>
-        <p><b>Took stored credentials out of CI/CD entirely.</b> 60+ long-lived AWS keys retired in favour of repository-scoped OIDC.</p>
-        <p><b>Made provisioning self-service.</b> 15+ Terraform modules turned a two-to-three-day ticket into a 45-minute run teams do themselves.</p>
-        <p><b>Set the alerting standard.</b> 25+ services alerting on availability and error rates rather than thresholds, with failures surfacing in under two minutes.</p>
-        <p><b>Cut compute spend 20%.</b> $60K to $48K a month, by right-sizing workloads and tuning Cluster Autoscaler.</p>
+    <section class="sec" id="about">
+      <p class="kicker">About</p>
+      <h2>I build platforms that make the right path the easy path.</h2>
+      <div class="prose">
+        <p>Engineers shouldn’t need to understand every infrastructure layer to deploy safely. That means
+        paved roads — standardized workflows, reusable Terraform, GitOps delivery, and observability — so
+        the reliable way is also the easiest one.</p>
+        <p>I build systems teams can trust — automation for the routine, AI for the complex, and human
+        judgment at the center of both.</p>
       </div>
-    </article>
+    </section>
 
-    <article class="entry">
-      <div class="when">2021 &ndash; 2023</div>
-      <div>
-        <h3>HealthVerity</h3>
-        <p class="what">DevOps Engineer · Healthcare data platform · Philadelphia / Remote</p>
-        <p>First platform role — where making things work became making them repeatable.</p>
-        <p><b>Ended the weekly release window.</b> 12 containerized services moved onto GitHub Actions pipelines, so teams deployed on their own schedule.</p>
-        <p><b>Made a two-million-event-a-day pipeline recoverable.</b> Dead-letter queues, partial-batch retries and alarms turned vanished records into replayable ones; detection went from 30 minutes to under five.</p>
-        <p><b>Fixed authentication ten routes had been skipping.</b> JWT verification consolidated into one shared API Gateway authorizer instead of ten separate patches.</p>
-        <p><b>Automated a 90+ host fleet.</b> Patching and first-response diagnostics in Bash, standardizing triage for a six-engineer on-call rotation.</p>
+
+    <section class="sec" id="work">
+      <p class="kicker">Selected work</p>
+      <h2>Before, and after</h2>
+
+      <div class="balist">
+
+        <article class="ba">
+          <h3><span class="was">Docker-compose on a laptop</span> <span class="arw">&rarr;</span> <span class="now">commit-to-deploy on shared EKS</span></h3>
+          <p>A two-tier app with its own Helm charts and RDS in hand-written Terraform. Then three
+          teammates rewrote its IAM role, ingress and secrets — and I reviewed changes to my own service
+          that I hadn’t written.</p>
+          <ul class="tags"><li>EKS</li><li>Helm</li><li>Terraform</li><li>Gateway API</li></ul>
+        </article>
+
+        <article class="ba">
+          <h3><span class="was">The CDK the app shipped with</span> <span class="arw">&rarr;</span> <span class="now">hand-written Terraform, module by module</span></h3>
+          <p>A serverless stack on API Gateway, Lambda, DynamoDB and Cognito — no container, no VM, no VPC.
+          Two Lambdas from one bundle with separate roles, so the public one can only <code>Scan</code> and
+          never write.</p>
+          <ul class="tags"><li>Terraform</li><li>Lambda</li><li>API Gateway</li><li>DynamoDB</li><li>Cognito</li></ul>
+        </article>
+
+        <article class="ba">
+          <h3><span class="was">Acceptance criteria nobody re-read</span> <span class="arw">&rarr;</span> <span class="now">checked on every pull request</span></h3>
+          <p>A reusable workflow that scores a diff against its ticket, criterion by criterion, and posts
+          what it found. It advises; a human still approves.</p>
+          <ul class="tags"><li>Claude Code</li><li>GitHub Actions</li><li>Python</li></ul>
+        </article>
+
       </div>
-    </article>
+    </section>
 
-  </div>
-</section>
+    <section class="sec" id="skills">
+      <p class="kicker">Skills</p>
+      <h2>What I work with</h2>
+      <div class="skillgrid">
+        <div class="skill">
+          <h3>Cloud</h3>
+          <p>AWS — EC2, EKS, ECS/Fargate, Lambda, API Gateway, VPC, IAM, S3, RDS, DynamoDB, SQS, ECR, ALB, CloudWatch</p>
+        </div>
+        <div class="skill">
+          <h3>Infrastructure</h3>
+          <p>Kubernetes, Docker, Helm, Terraform</p>
+        </div>
+        <div class="skill">
+          <h3>CI/CD</h3>
+          <p>GitHub Actions, reusable workflows, Argo CD</p>
+        </div>
+        <div class="skill">
+          <h3>Observability</h3>
+          <p>Prometheus, Grafana, CloudWatch</p>
+        </div>
+        <div class="skill">
+          <h3>Security</h3>
+          <p>GitHub Actions OIDC, IAM, AWS Secrets Manager, IRSA, Secrets Store CSI Driver, API Gateway authorizers, image scanning</p>
+        </div>
+        <div class="skill">
+          <h3>Systems</h3>
+          <p>Linux (Amazon Linux, Ubuntu), Bash</p>
+        </div>
+        <div class="skill">
+          <h3>AI workflows</h3>
+          <p>Claude Code, custom agent skills — <a href="agent-log.html">see how I use them</a></p>
+        </div>
+      </div>
+    </section>
 
-<section class="colophon" id="built">
-  <div class="wrap">
-    <div class="inner">
-      <p class="eyebrow">How this site is built</p>
-      <p>Static HTML and CSS, no framework and no build step, served from GitHub Pages. Components are
-      <code>&lt;details&gt;</code> elements that ship open and are collapsed by six lines of JavaScript —
-      so with JavaScript disabled or broken, this page is a complete document rather than a row of empty boxes.</p>
-      <p>The deploy line is the only live thing here: the commit and timestamp are written in by the
-      GitHub Actions workflow that publishes the page. Nothing else carries a status indicator, because
-      nothing else is being measured — a green dot I wasn&rsquo;t measuring would be a fake instrument.</p>
-      <p><a href="https://github.com/tatia-bit/tatiarazmadze.com">Source for this site &rarr;</a></p>
-    </div>
-  </div>
-</section>
+    <section class="sec" id="experience">
+      <p class="kicker">Experience</p>
+      <h2>Where I’ve done it</h2>
 
-</main>
+      <article class="job">
+        <div class="job-head">
+          <div>
+            <h3>Platform Engineer</h3>
+            <p class="org">AppsFlyer · Mobile marketing analytics · New York, NY</p>
+          </div>
+          <span class="years">2023 — present</span>
+        </div>
+        <p class="job-intro">Own an EKS platform used by four product teams and about 30 engineers.</p>
+        <ul>
+          <li>Migrated <b>50+ Kubernetes applications</b> from CI-driven Helm releases to pull-based GitOps on Argo CD, cutting configuration drift across environments.</li>
+          <li>Retired <b>60+ long-lived AWS keys</b> by choosing repository-scoped OIDC over key rotation — CI/CD now holds no stored credentials.</li>
+          <li>Built <b>15+ Terraform modules</b> adopted by four product teams, replacing two-to-three-day provisioning tickets with self-service environments in <b>under 45 minutes</b>.</li>
+          <li>Set the Prometheus and Grafana alerting standard for <b>25+ services</b> on availability and error-rate signals, with crash loops and elevated 5xx surfacing in <b>under two minutes</b>.</li>
+          <li>Cut monthly worker-node spend from <b>$60K to $48K</b> across eight Kubernetes clusters by right-sizing workloads and tuning Cluster Autoscaler.</li>
+          <li>Wrote Claude Code skills used across <b>20 repositories</b>, generating Terraform from requirements and checking pull requests against acceptance criteria.</li>
+        </ul>
+      </article>
 
-<footer>
-  <div class="wrap">
-    <a href="resume.pdf">Resume (PDF)</a>
-    <a href="mailto:tatiarazmadze.t@gmail.com">tatiarazmadze.t@gmail.com</a>
-    <a href="https://github.com/tatia-bit">GitHub</a>
-    <a href="https://www.linkedin.com/in/tatiarazmadze">LinkedIn</a>
-  </div>
-</footer>
+      <article class="job">
+        <div class="job-head">
+          <div>
+            <h3>DevOps Engineer</h3>
+            <p class="org">HealthVerity · Healthcare data platform · Philadelphia, PA / Remote</p>
+          </div>
+          <span class="years">2021 — 2023</span>
+        </div>
+        <p class="job-intro">First platform role — where making things work became making them repeatable.</p>
+        <ul>
+          <li>Replaced weekly manual release windows for <b>12 containerized services</b> with GitHub Actions pipelines, letting teams deploy independently on demand.</li>
+          <li>Owned reliability for a healthcare-data pipeline processing <b>two million events daily</b>, making failed records visible and replayable through SQS and Lambda.</li>
+          <li>Automated patching and first-response diagnostics across <b>90+ Amazon Linux hosts</b>, standardizing triage for a six-engineer on-call rotation.</li>
+          <li>Secured serverless services on Lambda and API Gateway by moving JWT verification into a shared authorizer rather than patching <b>10 routes</b> individually.</li>
+        </ul>
+      </article>
+    </section>
 
-<script src="app.js"></script>
+    <section class="sec" id="contact">
+      <p class="kicker">Contact</p>
+      <h2>Let’s talk</h2>
+      <p class="prose">I’m open to platform and infrastructure roles in New York or remote.</p>
+      <p class="downarrow" aria-hidden="true">&darr;</p>
+      <div class="actions">
+        <a class="btn" href="mailto:tatiarazmadze.t@gmail.com">tatiarazmadze.t@gmail.com</a>
+        <a class="btn ghost" href="resume.pdf">Resume (PDF)</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p class="deploy" id="deploy"><!--DEPLOY_STAMP--></p>
+    <p class="madeby"><a href="https://github.com/tatia-bit/tatiarazmadze.com">Source for this site</a></p>
+  </footer>
+
+</div>
 </body>
 </html>
