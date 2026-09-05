@@ -406,10 +406,90 @@ footer a:hover { color: var(--accent); }
 .hero .lede { font-size: 1.12rem; color: var(--fg); max-width: 27rem; margin: 0 0 1.7rem; }
 @media (max-width: 520px) { .hero .meta { font-size: .64rem; } .hero .meta i { padding: 0 .3rem; } }
 
-/* contact arrow */
+/* contact arrow — centred on the email button */
+.reach { display: flex; flex-wrap: wrap; gap: .7rem; align-items: flex-end; }
+
+.reach-col { display: flex; flex-direction: column; align-items: center; width: fit-content; }
+
 .downarrow {
-  font-size: 1.8rem;
-  line-height: 1;
-  color: var(--accent);
-  margin: .2rem 0 1rem;
+  width: 34px;
+  height: 52px;
+  margin: .3rem 0 .55rem;
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
+
+@media (max-width: 520px) {
+  .reach { align-items: stretch; }
+  .reach-col { width: 100%; }
+  .reach-col .btn { width: 100%; text-align: center; }
+}
+
+.ba-kind {
+  font-family: var(--mono);
+  font-size: .65rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--fg-faint);
+  margin: 0 0 .5rem;
+}
+
+/* ---------- agent log page ---------- */
+
+.wrap { max-width: 46rem; margin: 0 auto; }
+
+.log-head { padding: 2.6rem 0 1.4rem; border-bottom: 1px solid var(--line); }
+
+.back {
+  font-family: var(--mono);
+  font-size: .7rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--fg-faint);
+  text-decoration: none;
+}
+.back:hover { color: var(--fg); }
+
+.log-head h1 {
+  font-size: clamp(1.9rem, 4.6vw, 2.9rem);
+  line-height: 1.08;
+  max-width: 20ch;
+  margin: .7rem 0 1rem;
+}
+.log-head h1 .light { display: block; font-weight: 300; font-style: italic; color: var(--fg-soft); }
+
+.log-lede { font-size: 1.06rem; color: var(--fg-soft); max-width: 36rem; margin: 0; }
+
+.log-section { padding: 1.8rem 0 .4rem; }
+.log-section h2 {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 1.4rem;
+  letter-spacing: -0.015em;
+  margin: 0 0 .7rem;
+  max-width: none;
+}
+.log-section p { margin: 0 0 .85rem; max-width: 38rem; color: var(--fg-soft); }
+.log-section p b { color: var(--fg); font-weight: 600; }
+
+.pull {
+  border-left: 3px solid var(--accent);
+  background: var(--ground);
+  border-radius: 0 12px 12px 0;
+  padding: 1.05rem 1.25rem;
+  margin: 1.3rem 0;
+}
+.pull p { margin: 0; color: var(--fg); }
+
+.colophon { padding: 1.6rem 0 2.4rem; }
+.colophon .inner {
+  border-top: 1px solid var(--line);
+  padding-top: 1.3rem;
+  font-size: .9rem;
+  color: var(--fg-soft);
+}
+.colophon .inner p { margin: 0; }
+.colophon a { color: var(--accent); }

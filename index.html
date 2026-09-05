@@ -82,26 +82,40 @@
       <div class="balist">
 
         <article class="ba">
-          <h3><span class="was">Docker-compose on a laptop</span> <span class="arw">&rarr;</span> <span class="now">commit-to-deploy on shared EKS</span></h3>
-          <p>A two-tier app with its own Helm charts and RDS in hand-written Terraform. Then three
-          teammates rewrote its IAM role, ingress and secrets — and I reviewed changes to my own service
-          that I hadn’t written.</p>
-          <ul class="tags"><li>EKS</li><li>Helm</li><li>Terraform</li><li>Gateway API</li></ul>
+          <p class="ba-kind">EKS delivery</p>
+          <h3><span class="was">Docker Compose on a laptop</span> <span class="arw">&rarr;</span> <span class="now">repeatable delivery on shared EKS</span></h3>
+          <p>I moved a two-tier application from local Docker Compose to GitHub Actions, Helm, and a shared
+          EKS platform, with RDS provisioned in Terraform. I owned the delivery path end to end and
+          reviewed the IAM, ingress, and secrets changes teammates made to it during the cutover.</p>
+          <ul class="tags"><li>EKS</li><li>Helm</li><li>Terraform</li><li>GitHub Actions</li><li>RDS</li></ul>
         </article>
 
         <article class="ba">
-          <h3><span class="was">The CDK the app shipped with</span> <span class="arw">&rarr;</span> <span class="now">hand-written Terraform, module by module</span></h3>
-          <p>A serverless stack on API Gateway, Lambda, DynamoDB and Cognito — no container, no VM, no VPC.
-          Two Lambdas from one bundle with separate roles, so the public one can only <code>Scan</code> and
-          never write.</p>
+          <p class="ba-kind">Serverless infrastructure</p>
+          <h3><span class="was">CDK-generated infrastructure</span> <span class="arw">&rarr;</span> <span class="now">explicit Terraform, resource by resource</span></h3>
+          <p>I translated a serverless stack across API Gateway, Lambda, DynamoDB, and Cognito into
+          handwritten Terraform. Separate IAM roles kept the public Lambda read-only while giving each
+          function only the access it needed.</p>
           <ul class="tags"><li>Terraform</li><li>Lambda</li><li>API Gateway</li><li>DynamoDB</li><li>Cognito</li></ul>
         </article>
 
         <article class="ba">
-          <h3><span class="was">Acceptance criteria nobody re-read</span> <span class="arw">&rarr;</span> <span class="now">checked on every pull request</span></h3>
-          <p>A reusable workflow that scores a diff against its ticket, criterion by criterion, and posts
-          what it found. It advises; a human still approves.</p>
-          <ul class="tags"><li>Claude Code</li><li>GitHub Actions</li><li>Python</li></ul>
+          <p class="ba-kind">AI tooling</p>
+          <h3><span class="was">Best practice in a document</span> <span class="arw">&rarr;</span> <span class="now">mistakes encoded in a skill</span></h3>
+          <p>I wrote a skill that turns a requirements list into hand-written Terraform and traces every
+          criterion back to the code that satisfies it. It refuses off-the-shelf modules and asks rather
+          than guessing on anything affecting security. Its gotchas are failures I ran into, written down
+          so the tool checks for them instead of me remembering.</p>
+          <ul class="tags"><li>Terraform</li><li>RDS</li><li>Claude Code</li></ul>
+        </article>
+
+        <article class="ba">
+          <p class="ba-kind">AI workflow</p>
+          <h3><span class="was">Manual acceptance checks</span> <span class="arw">&rarr;</span> <span class="now">reviewed on every pull request</span></h3>
+          <p>I built a reusable workflow that evaluates each code change against its ticket, criterion by
+          criterion, and posts what it finds. The system advises; a human reviews the evidence and makes
+          the final decision.</p>
+          <ul class="tags"><li>Claude Code</li><li>GitHub Actions</li><li>Reusable workflows</li></ul>
         </article>
 
       </div>
@@ -187,9 +201,14 @@
       <p class="kicker">Contact</p>
       <h2>Let’s talk</h2>
       <p class="prose">I’m open to platform and infrastructure roles in New York or remote.</p>
-      <p class="downarrow" aria-hidden="true">&darr;</p>
-      <div class="actions">
-        <a class="btn" href="mailto:tatiarazmadze.t@gmail.com">tatiarazmadze.t@gmail.com</a>
+      <div class="reach">
+        <div class="reach-col">
+          <svg class="downarrow" viewBox="0 0 28 46" aria-hidden="true" focusable="false">
+            <path d="M14 3 V33" />
+            <path d="M4 25 L14 36 L24 25" />
+          </svg>
+          <a class="btn" href="mailto:tatiarazmadze.t@gmail.com">tatiarazmadze.t@gmail.com</a>
+        </div>
         <a class="btn ghost" href="resume.pdf">Resume (PDF)</a>
       </div>
     </section>
