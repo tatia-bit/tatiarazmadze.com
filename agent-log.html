@@ -76,10 +76,11 @@
     <code>publicly_accessible</code>, against a standard that required private access. Nothing was
     syntactically wrong. The requirement simply was not expressed anywhere in the code, and the default
     is not the safe one.</p>
-    <p>That gap is why my <code>rds-terraform-provisioner</code> skill carries a Gotchas section listing
-    <code>publicly_accessible</code> defaulting to true when requirements go quiet. <b>I hit it, so I
-    encoded it.</b> The skill also refuses off-the-shelf modules outright and asks rather than guesses
-    on anything security-shaped — assume-and-flag is fine for the rest.</p>
+    <p>That gap is why my <code>rds-terraform-provisioner</code> skill carries a gotcha for
+    <code>publicly_accessible</code>: requirements lists go quiet on it, so the skill sets it explicitly
+    rather than inheriting whatever the default happens to be. <b>I hit it, so I encoded it.</b> The skill
+    also refuses off-the-shelf modules outright and asks rather than guesses on anything security-shaped —
+    assume-and-flag is fine for the rest.</p>
   </div>
 </section>
 
