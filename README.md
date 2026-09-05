@@ -3,8 +3,8 @@
 Personal site — a status page for what I run, with one deep-dive on reviewing agent output.
 
 Static HTML and CSS. No framework and no build step. One external dependency: Fraunces from Google Fonts, loaded with `display=swap` and a serif fallback, so text renders immediately whether or not the font arrives. Served from GitHub Pages,
-published by `.github/workflows/deploy.yml`, which also stamps the deploying commit, timestamp and
-build duration into the header — the only live data on the page.
+published by `.github/workflows/deploy.yml` on every push to `main`, authenticating with GitHub OIDC
+(no stored credentials).
 
 ## Structure
 
@@ -21,8 +21,8 @@ build duration into the header — the only live data on the page.
 
 - **The absence rule.** A component appears only if it resolves to a specific number or a named
   decision. No adjectives, no skill percentages.
-- **No fake instruments.** Nothing gets a status indicator unless it is actually measured. The deploy
-  line is measured; nothing else is, so nothing else has one.
+- **No fake instruments.** Nothing on the page carries a status indicator, because nothing on it is
+  being measured.
 - **Progressive enhancement.** Components ship `open` in the markup and JavaScript collapses them.
   With JS disabled or broken the page is a complete document, never a row of empty boxes.
 - **The phone is the design.** Not a fallback.

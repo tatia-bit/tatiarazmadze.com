@@ -20,26 +20,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Stamp the deploy line
-        run: |
-          sha_short="${GITHUB_SHA::7}"
-          stamped_at=$(date -u +"%Y-%m-%d %H:%M UTC")
-          # Only facts that are actually measured go in the stamp. Build duration
-          # was removed: timing it inside this step measured nothing and printed 0s,
-          # which is precisely the fake instrument this page refuses to display.
-          stamp="last deploy: ${sha_short} · ${stamped_at}"
-          # Escape for sed, then replace the marker in place.
-          esc=$(printf '%s' "$stamp" | sed -e 's/[\/&]/\\&/g')
-          sed -i "s/<!--DEPLOY_STAMP-->/${esc}/" index.html
-          echo "Stamped: $stamp"
-
-      - name: Verify the marker was replaced
-        run: |
-          if grep -q "DEPLOY_STAMP" index.html; then
-            echo "::error::deploy stamp marker was not replaced"
-            exit 1
-          fi
-
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
