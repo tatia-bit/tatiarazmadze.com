@@ -1,33 +1,30 @@
-<!doctype html>
-<html><head><meta charset="utf-8">
+<!doctype html><html><head><meta charset="utf-8">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&display=block" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;600;700&display=block" rel="stylesheet">
 <style>
-  *{box-sizing:border-box;margin:0}
-  body{width:1200px;height:630px;background:#f7f3ec;color:#1c1a16;
-       font-family:ui-sans-serif,-apple-system,Helvetica,Arial,sans-serif;
-       padding:74px 80px;display:flex;flex-direction:column;justify-content:space-between;
-       border-bottom:14px solid #1d5c4c}
-  .top{font-family:ui-monospace,Menlo,monospace;font-size:17px;letter-spacing:.2em;
-       text-transform:uppercase;color:#8b8477}
-  h1{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:104px;line-height:.94;
-     letter-spacing:-.025em}
-  h1 em{display:block;font-weight:300;font-style:italic;color:#5d574c;font-size:76px}
-  .nums{display:flex;gap:56px;padding-top:26px;border-top:1px solid #ded6c8}
-  .n{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:36px;letter-spacing:-.01em}
-  .n span{display:block;font-family:ui-monospace,Menlo,monospace;font-size:13px;font-weight:400;
-          letter-spacing:.16em;text-transform:uppercase;color:#8b8477;margin-top:6px}
-  .foot{font-family:ui-monospace,Menlo,monospace;font-size:19px;letter-spacing:.14em;
-        text-transform:uppercase;color:#1d5c4c}
+*{box-sizing:border-box;margin:0}
+body{width:1200px;height:630px;background:#fbf8f2;color:#16150f;
+ font-family:Inter,sans-serif;padding:72px 80px;display:flex;flex-direction:column;
+ justify-content:space-between;border-bottom:14px solid #1d5c4c}
+.top{font-family:"IBM Plex Mono",monospace;font-size:17px;letter-spacing:.16em;
+ text-transform:uppercase;color:#1d5c4c}
+h1{font-size:86px;font-weight:700;letter-spacing:-.035em;line-height:1}
+.role{font-family:"IBM Plex Mono",monospace;font-size:26px;color:#565043;margin-top:14px;letter-spacing:-.01em}
+.chips{display:flex;gap:12px;padding-top:26px;border-top:1px solid #e2dbcc}
+.chip{font-family:"IBM Plex Mono",monospace;font-size:19px;color:#565043;
+ border:1px solid #e2dbcc;background:#f2ede2;border-radius:7px;padding:9px 16px}
+.foot{font-family:"IBM Plex Mono",monospace;font-size:19px;letter-spacing:.12em;
+ text-transform:uppercase;color:#1d5c4c}
 </style></head>
 <body>
   <div class="top">New York, NY &nbsp;·&nbsp; Remote or hybrid &nbsp;·&nbsp; Open to platform roles</div>
-  <h1>Tatia Razmadze<em>Platform &amp; DevOps Engineer</em></h1>
-  <div class="nums">
-    <div class="n">8 clusters<span>Amazon EKS</span></div>
-    <div class="n">60+ &rarr; 0<span>Long-lived keys</span></div>
-    <div class="n">$60K &rarr; $48K<span>Monthly spend</span></div>
-    <div class="n">2M / day<span>Events</span></div>
+  <div>
+    <h1>Tatia Razmadze</h1>
+    <div class="role">Platform Engineer — AWS · Kubernetes · Terraform · GitOps</div>
+  </div>
+  <div class="chips">
+    <div class="chip">8 EKS clusters</div><div class="chip">25+ services</div>
+    <div class="chip">60+ keys &rarr; 0</div><div class="chip">$60K &rarr; $48K</div>
   </div>
   <div class="foot">tatiarazmadze.com</div>
 </body></html>

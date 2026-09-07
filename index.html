@@ -9,207 +9,151 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://tatiarazmadze.com/">
 <meta property="og:title" content="Tatia Razmadze — Platform Engineer">
-<meta property="og:description" content="AWS, Kubernetes, Terraform, GitOps. Nobody should have to think about the platform.">
+<meta property="og:description" content="AWS, Kubernetes, Terraform, GitOps. What I build and run.">
 <meta property="og:image" content="https://tatiarazmadze.com/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://tatiarazmadze.com/og.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <div class="sheet">
 
-  <nav class="topnav">
-    <div class="navlinks">
-      <a href="#about">About</a>
-      <a href="#work">Work</a>
-      <a href="#skills">Skills</a>
-      <a href="#experience">Experience</a>
-      <a href="#contact">Contact</a>
-    </div>
+  <nav class="nav">
+    <a href="#about">About</a><a href="#projects">Work</a><a href="#stack">Stack</a><a href="#exp">Experience</a><a href="#contact">Contact</a>
   </nav>
 
-  <header class="hero" id="top">
-    <div class="hero-text">
-      <h1>Tatia <span class="hl">Razmadze</span><span class="role">Platform &amp; DevOps Engineer</span></h1>
-      <p class="meta">
-        <span>New York, NY</span> <i>·</i> <span>Remote or hybrid</span> <i>·</i> <span>Open to platform roles</span>
-      </p>
-      <p class="lede">Fast where it can be. Careful where it matters.</p>
+  <header class="hero">
+    <div>
+      <p class="eyebrow">New York, NY · Remote or hybrid · Open to platform roles</p>
+      <h1>Tatia Razmadze</h1>
+      <p class="role"><b>Platform Engineer</b> — AWS · Kubernetes · Terraform · GitOps</p>
+      <ul class="facts">
+        <li>8 EKS clusters</li><li>25+ services</li><li>4 product teams</li><li>5+ years</li>
+      </ul>
       <div class="actions">
-        <a class="btn" href="#contact">Contact</a>
-        <a class="btn ghost" href="resume.pdf">Resume</a>
-      </div>
-      <div class="socials">
-        <a href="https://www.linkedin.com/in/tatiarazmadze" aria-label="LinkedIn">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.76-1.95C20.3 8.75 21 11 21 14.1V21h-4v-6.1c0-1.45-.03-3.3-2.02-3.3-2.02 0-2.33 1.58-2.33 3.2V21H9z"/></svg>
-        </a>
-        <a href="https://github.com/tatia-bit" aria-label="GitHub">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 .5a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2.2c-3.34.72-4.04-1.42-4.04-1.42-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.34-5.47-5.96 0-1.32.47-2.4 1.24-3.24-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6.01 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.25 2.88.12 3.18.77.84 1.23 1.92 1.23 3.24 0 4.63-2.8 5.65-5.48 5.95.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58A12 12 0 0 0 12 .5z"/></svg>
-        </a>
-        <a href="mailto:tatiarazmadze.t@gmail.com" aria-label="Email">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M2 5.5A1.5 1.5 0 0 1 3.5 4h17A1.5 1.5 0 0 1 22 5.5v.3l-10 5.7L2 5.8zM2 8.1l9.5 5.4c.3.2.7.2 1 0L22 8.1V18.5a1.5 1.5 0 0 1-1.5 1.5h-17A1.5 1.5 0 0 1 2 18.5z"/></svg>
-        </a>
+        <a class="btn" href="resume.pdf">Resume (PDF)</a>
+        <a class="btn ghost" href="mailto:tatiarazmadze.t@gmail.com">Email</a>
+        <a class="btn ghost" href="https://github.com/tatia-bit">GitHub</a>
       </div>
     </div>
-
-    <div class="hero-art">
-      <div class="blob"><img src="tatia.jpg" alt="Tatia Razmadze" width="800" height="800"></div>
-    </div>
+    <figure class="portrait" style="margin:0"><img src="tatia.jpg" alt="Tatia Razmadze"></figure>
   </header>
 
-  <main>
 
-    <section class="sec" id="about">
-      <p class="kicker">About</p>
-      <h2>I build platforms that make the right path the easy path.</h2>
-      <div class="prose">
-        <p>Engineers shouldn’t need to understand every infrastructure layer to deploy safely. The answer
-        is a paved road — standardized workflows, reusable Terraform, GitOps delivery, and observability —
-        so the reliable way is also the easiest one.</p>
-        <p>The same principle guides how I use automation and AI: automation for the routine, AI for the
-        complex, human judgment at the center of both.</p>
-      </div>
-    </section>
+  <section id="about">
+    <h2>About</h2>
+    <p class="lead">I build and run the delivery systems teams use: <b>reusable Terraform modules</b>,
+    GitOps for 50+ applications, and alerting on availability and error rates rather than static
+    thresholds, across 25+ services.</p>
+    <p class="lead">I also build AI-assisted review workflows used across 20 repositories. They flag
+    issues; a human reviews every finding and makes the final decision.</p>
+  </section>
 
+  <section id="projects">
+    <h2>Selected work</h2>
+    <div class="projects">
 
-    <section class="sec" id="work">
-      <p class="kicker">Selected work</p>
-      <h2>Before and after</h2>
-
-      <div class="balist">
-
-        <article class="ba">
-          <p class="ba-kind">EKS delivery</p>
-          <h3><span class="was">Docker Compose on a laptop</span> <span class="arw">&rarr;</span> <span class="now">repeatable delivery on shared EKS</span></h3>
-          <p>I moved a two-tier application from local Docker Compose to GitHub Actions, Helm, and a shared
-          EKS platform, with RDS provisioned in Terraform. I owned the delivery path end to end and
-          reviewed the IAM, ingress, and secrets changes teammates made to it during the cutover.</p>
-          <ul class="tags"><li>EKS</li><li>Helm</li><li>Terraform</li><li>GitHub Actions</li><li>RDS</li></ul>
-        </article>
-
-        <article class="ba">
-          <p class="ba-kind">Serverless infrastructure</p>
-          <h3><span class="was">CDK-generated infrastructure</span> <span class="arw">&rarr;</span> <span class="now">explicit Terraform, resource by resource</span></h3>
-          <p>I translated a serverless stack across API Gateway, Lambda, DynamoDB, and Cognito into
-          handwritten Terraform. Separate IAM roles kept the public Lambda read-only while giving each
-          function only the access it needed.</p>
-          <ul class="tags"><li>Terraform</li><li>Lambda</li><li>API Gateway</li><li>DynamoDB</li><li>Cognito</li></ul>
-        </article>
-
-        <article class="ba">
-          <p class="ba-kind">AI tooling</p>
-          <h3><span class="was">Judgment in someone&rsquo;s head</span> <span class="arw">&rarr;</span> <span class="now">checks that run on every change</span></h3>
-          <p>I write Claude Code skills that turn a requirements list into hand-written Terraform and trace
-          every criterion back to the code satisfying it, and a reusable workflow that evaluates each pull
-          request against its ticket. Both advise; a human still approves. The gotchas in the skill are
-          failures I ran into, written down so the tool checks for them instead of me remembering.</p>
-          <ul class="tags"><li>Claude Code</li><li>Terraform</li><li>GitHub Actions</li><li>Reusable workflows</li></ul>
-          <p class="linkline"><a href="agent-log.html">The time it was wrong &rarr;</a></p>
-        </article>
-
-      </div>
-    </section>
-
-    <section class="sec" id="skills">
-      <p class="kicker">Skills</p>
-      <h2>What I work with</h2>
-      <div class="skillgrid">
-        <div class="skill">
-          <h3>Cloud</h3>
-          <p>AWS — EC2, EKS, ECS/Fargate, Lambda, API Gateway, VPC, IAM, S3, RDS, DynamoDB, SQS, ECR, ALB, CloudWatch</p>
-        </div>
-        <div class="skill">
-          <h3>Infrastructure</h3>
-          <p>Kubernetes, Docker, Helm, Terraform</p>
-        </div>
-        <div class="skill">
-          <h3>CI/CD</h3>
-          <p>GitHub Actions, reusable workflows, Argo CD</p>
-        </div>
-        <div class="skill">
-          <h3>Observability</h3>
-          <p>Prometheus, Grafana, CloudWatch</p>
-        </div>
-        <div class="skill">
-          <h3>Security</h3>
-          <p>GitHub Actions OIDC, IAM, AWS Secrets Manager, IRSA, Secrets Store CSI Driver, API Gateway authorizers, image scanning</p>
-        </div>
-        <div class="skill">
-          <h3>Systems</h3>
-          <p>Linux (Amazon Linux, Ubuntu), Bash</p>
-        </div>
-        <div class="skill">
-          <h3>AI workflows</h3>
-          <p>Claude Code, custom agent skills, prompt and workflow design</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="sec" id="experience">
-      <p class="kicker">Experience</p>
-      <h2>Where I’ve done it</h2>
-
-      <article class="job">
-        <div class="job-head">
-          <div>
-            <h3>Platform Engineer</h3>
-            <p class="org">AppsFlyer · Mobile marketing analytics · New York, NY</p>
-          </div>
-          <span class="years">2023 — present</span>
-        </div>
-        <p class="job-intro">Own an EKS platform used by four product teams and about 30 engineers.</p>
-        <ul>
-          <li>Migrated <b>50+ Kubernetes applications</b> from CI-driven Helm releases to pull-based GitOps on Argo CD, cutting configuration drift across environments.</li>
-          <li>Retired <b>60+ long-lived AWS keys</b> by choosing repository-scoped OIDC over key rotation — CI/CD now holds no stored credentials.</li>
-          <li>Built <b>15+ Terraform modules</b> adopted by four product teams, replacing two-to-three-day provisioning tickets with self-service environments in <b>under 45 minutes</b>.</li>
-          <li>Set the Prometheus and Grafana alerting standard for <b>25+ services</b> on availability and error-rate signals, with crash loops and elevated 5xx surfacing in <b>under two minutes</b>.</li>
-          <li>Cut monthly worker-node spend from <b>$60K to $48K</b> across eight Kubernetes clusters by right-sizing workloads and tuning Cluster Autoscaler.</li>
-          <li>Wrote Claude Code skills used across <b>20 repositories</b>, generating Terraform from requirements and checking pull requests against acceptance criteria.</li>
-        </ul>
+      <article class="proj2">
+        <div class="phead"><p class="kind">EKS delivery</p>
+          <h3><span class="was">Docker Compose on a laptop</span><span class="arw">&rarr;</span>repeatable delivery on shared EKS</h3></div>
+        <div class="pdia"><svg viewBox="0 0 620 118" xmlns="http://www.w3.org/2000/svg">
+          <defs><marker id="m1" markerWidth="8" markerHeight="8" refX="7" refY="2.5" orient="auto"><path d="M0,0 L7,2.5 L0,5" class="ar"/></marker></defs>
+          <g class="ar" marker-end="url(#m1)"><line x1="92" y1="30" x2="126" y2="30"/><line x1="218" y1="30" x2="252" y2="30"/><line x1="344" y1="30" x2="378" y2="30"/><line x1="470" y1="30" x2="504" y2="30"/><line x1="556" y1="50" x2="556" y2="76"/></g>
+          <g class="bx"><rect x="6" y="12" width="86" height="36" rx="5"/><rect x="128" y="12" width="90" height="36" rx="5"/><rect x="254" y="12" width="90" height="36" rx="5"/><rect x="380" y="12" width="90" height="36" rx="5"/><rect x="506" y="12" width="100" height="36" rx="5"/><rect x="506" y="78" width="100" height="36" rx="5"/></g>
+          <g class="lb" text-anchor="middle"><text x="49" y="34">git push</text><text x="173" y="34">Actions</text><text x="299" y="34">ECR</text><text x="425" y="34">Helm</text><text x="556" y="34">EKS</text><text x="556" y="100">RDS</text></g>
+          <g class="sm" text-anchor="middle"><text x="173" y="62">OIDC, no keys</text><text x="299" y="62">image scan</text><text x="425" y="62">per-env values</text></g>
+        </svg></div>
+        <p class="pnote">I owned the delivery path, and reviewed the IAM, ingress and secrets changes teammates made to it during the cutover.</p>
+        <ul class="tags"><li>EKS</li><li>Helm</li><li>Terraform</li><li>GitHub Actions</li></ul>
       </article>
 
-      <article class="job">
-        <div class="job-head">
-          <div>
-            <h3>DevOps Engineer</h3>
-            <p class="org">HealthVerity · Healthcare data platform · Philadelphia, PA / Remote</p>
-          </div>
-          <span class="years">2021 — 2023</span>
-        </div>
-        <p class="job-intro">First platform role — where making things work became making them repeatable.</p>
-        <ul>
-          <li>Replaced weekly manual release windows for <b>12 containerized services</b> with GitHub Actions pipelines, letting teams deploy independently on demand.</li>
-          <li>Owned reliability for a healthcare-data pipeline processing <b>two million events daily</b>, making failed records visible and replayable through SQS and Lambda.</li>
-          <li>Automated patching and first-response diagnostics across <b>90+ Amazon Linux hosts</b>, standardizing triage for a six-engineer on-call rotation.</li>
-          <li>Secured serverless services on Lambda and API Gateway by moving JWT verification into a shared authorizer rather than patching <b>10 routes</b> individually.</li>
-        </ul>
+      <article class="proj2">
+        <div class="phead"><p class="kind">Serverless</p>
+          <h3><span class="was">CDK-generated infrastructure</span><span class="arw">&rarr;</span>explicit Terraform, resource by resource</h3></div>
+        <div class="pdia"><svg viewBox="0 0 620 168" xmlns="http://www.w3.org/2000/svg">
+          <g class="ar" marker-end="url(#m1)"><line x1="92" y1="62" x2="126" y2="26"/><line x1="92" y1="76" x2="126" y2="76"/><line x1="240" y1="26" x2="274" y2="26"/><line x1="240" y1="76" x2="274" y2="76"/><line x1="388" y1="76" x2="422" y2="76"/><line x1="240" y1="90" x2="274" y2="122"/><line x1="388" y1="126" x2="422" y2="126"/></g>
+          <g class="bx"><rect x="6" y="52" width="86" height="34" rx="5"/><rect x="128" y="10" width="110" height="32" rx="5"/><rect x="276" y="10" width="110" height="32" rx="5"/><rect x="128" y="60" width="110" height="32" rx="5"/><rect x="276" y="60" width="110" height="32" rx="5"/><rect x="424" y="60" width="110" height="32" rx="5"/><rect x="276" y="110" width="110" height="32" rx="5"/><rect x="424" y="110" width="110" height="32" rx="5"/></g>
+          <g class="lb" text-anchor="middle"><text x="49" y="73">Browser</text><text x="183" y="31">CloudFront</text><text x="331" y="31">S3 private</text><text x="183" y="81">API Gateway</text><text x="331" y="81">Lambda</text><text x="479" y="81">DynamoDB</text><text x="331" y="131">Lambda</text><text x="479" y="131">DynamoDB</text></g>
+          <g class="sm" text-anchor="middle"><text x="331" y="52">OAC only</text><text x="183" y="104">JWT authorizer</text><text x="479" y="102">read + write</text><text x="331" y="158">public &middot; Scan only</text><text x="479" y="158">read only</text></g>
+        </svg></div>
+        <p class="pnote">Separate IAM roles per function: the public path can read, never write.</p>
+        <ul class="tags"><li>Lambda</li><li>API Gateway</li><li>DynamoDB</li><li>Cognito</li></ul>
       </article>
-    </section>
 
-    <section class="sec" id="contact">
-      <p class="kicker">Contact</p>
-      <h2>Let’s talk</h2>
-      <p class="prose">I’m open to platform and infrastructure roles.</p>
-      <div class="reach">
-        <div class="reach-col">
-          <svg class="downarrow" viewBox="0 0 28 46" aria-hidden="true" focusable="false">
-            <path d="M14 3 V33" />
-            <path d="M4 25 L14 36 L24 25" />
-          </svg>
-          <a class="btn" href="mailto:tatiarazmadze.t@gmail.com">tatiarazmadze.t@gmail.com</a>
-        </div>
-        <a class="btn ghost" href="resume.pdf">Resume (PDF)</a>
-      </div>
-    </section>
+      <article class="proj2">
+        <div class="phead"><p class="kind">AI tooling</p>
+          <h3><span class="was">Judgment in someone&rsquo;s head</span><span class="arw">&rarr;</span>checks that run on every change</h3></div>
+        <div class="pdia"><svg viewBox="0 0 620 128" xmlns="http://www.w3.org/2000/svg">
+          <g class="ar" marker-end="url(#m1)"><line x1="106" y1="30" x2="140" y2="30"/><line x1="272" y1="30" x2="306" y2="30"/><line x1="438" y1="30" x2="472" y2="30"/></g>
+          <g class="bx"><rect x="6" y="12" width="100" height="36" rx="5"/><rect x="142" y="12" width="130" height="36" rx="5"/><rect x="308" y="12" width="130" height="36" rx="5"/></g>
+          <rect x="474" y="12" width="140" height="36" rx="5" fill="#e4ede9" stroke="#1d5c4c"/>
+          <g class="lb" text-anchor="middle"><text x="56" y="34">pull request</text><text x="207" y="34">skill reads diff</text><text x="373" y="34">posts findings</text><text x="544" y="34">human approves</text></g>
+          <g class="sm" text-anchor="middle"><text x="207" y="62">vs acceptance criteria</text><text x="373" y="62">advises, never blocks</text><text x="544" y="62">the gate</text><text x="310" y="106">20 repositories · 15 application, 5 platform</text></g>
+        </svg></div>
+        <p class="pnote">It caught an RDS instance that never set <code>publicly_accessible</code>. It was also confidently wrong about an IAM policy, and I overrode it &mdash; <a href="agent-log.html">both cases in full &rarr;</a>.</p>
+        <ul class="tags"><li>Claude Code</li><li>Terraform</li><li>Reusable workflows</li></ul>
+      </article>
 
-  </main>
+    </div>
+  </section>
+
+  <section id="stack">
+    <h2>Stack</h2>
+    <div class="stack" id="toolgrid"></div>
+  </section>
+
+  <section id="exp">
+    <h2>Experience</h2>
+
+    <div class="role-row"><h3>Platform Engineer</h3><span class="co">AppsFlyer · 2023—now</span></div>
+    <ul class="bul">
+      <li><b>50+ Kubernetes applications</b> moved to Argo CD</li>
+      <li><b>60+ long-lived AWS keys</b> eliminated through OIDC</li>
+      <li>Provisioning reduced from <b>2–3 days to under 45 minutes</b></li>
+      <li>EKS worker-node spend reduced from <b>$60K to $48K</b></li>
+    </ul>
+
+    <div class="role-row"><h3>DevOps Engineer</h3><span class="co">HealthVerity · 2021—2023</span></div>
+    <ul class="bul">
+      <li>Automated delivery for <b>12 containerized services</b></li>
+      <li>Operated a pipeline processing <b>two million events daily</b></li>
+    </ul>
+
+    <p class="moreline"><a href="resume.pdf">See full experience in my resume &rarr;</a></p>
+  </section>
 
 
+  <section id="contact">
+    <h2>Contact</h2>
+    <p class="contact-note">Open to platform and infrastructure roles.</p>
+    <div class="contact-row">
+      <a class="btn" href="mailto:tatiarazmadze.t@gmail.com">tatiarazmadze.t@gmail.com</a>
+      <a class="btn ghost" href="resume.pdf">Resume (PDF)</a>
+      <a class="btn ghost" href="https://www.linkedin.com/in/tatiarazmadze">LinkedIn</a>
+      <a class="btn ghost" href="https://github.com/tatia-bit">GitHub</a>
+    </div>
+  </section>
 
 </div>
+
+<script>
+const tools=[["amazonwebservices","AWS"],["kubernetes","Kubernetes"],["terraform","Terraform"],["docker","Docker"],
+["helm","Helm"],["argo","Argo CD"],["githubactions","Actions"],["prometheus","Prometheus"],["grafana","Grafana"],["linux","Linux"]];
+Promise.all(tools.map(([f,n])=>fetch("icons/"+f+".svg").then(r=>r.text()).then(s=>`<div class="tool">${s}<span>${n}</span></div>`)))
+ .then(h=>document.getElementById("toolgrid").innerHTML=h.join(""));
+
+const map={"EKS":"kubernetes","Helm":"helm","Terraform":"terraform","GitHub Actions":"githubactions",
+"Lambda":"amazonwebservices","API Gateway":"amazonwebservices","DynamoDB":"amazonwebservices",
+"Cognito":"amazonwebservices","Claude Code":"claude","Reusable workflows":"githubactions"};
+document.querySelectorAll(".proj2 .tags li").forEach(li=>{
+  const f=map[li.textContent.trim()];
+  if(!f) return;
+  fetch("icons/"+f+".svg").then(r=>r.text()).then(svg=>{ li.insertAdjacentHTML("afterbegin", svg); });
+});
+</script>
 </body>
 </html>

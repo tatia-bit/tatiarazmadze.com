@@ -1,8 +1,12 @@
+# private / working files
 .DS_Store
-
-# private — never published
 resume-with-phone.html
 resume-with-phone.pdf
-
-# keep the full-res original local, not in the repo
 tatia-original.png
+headshot*
+_mockup*.html
+_mock_*
+_photo_*.jpg
+_crop_*.jpg
+_diagrams.html
+_size_*.html
