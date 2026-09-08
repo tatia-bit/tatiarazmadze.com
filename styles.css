@@ -23,6 +23,7 @@ h1{font-size:clamp(2rem,4.6vw,2.9rem);font-weight:700;letter-spacing:-.03em;line
 .role b{color:var(--fg);font-weight:600}
 .facts{display:flex;flex-wrap:wrap;gap:.4rem;margin:0 0 1.4rem;padding:0;list-style:none}
 .facts li{font-family:var(--mono);font-size:.72rem;letter-spacing:.03em;color:var(--fg-soft);background:var(--chip);border:1px solid var(--line);border-radius:5px;padding:.3rem .6rem}
+.herolede{font-size:1.02rem;color:var(--fg-soft);max-width:32rem;margin:.9rem 0 1.5rem}
 .actions{display:flex;gap:.6rem;flex-wrap:wrap}
 .btn{font-family:var(--mono);font-size:.8rem;letter-spacing:.04em;text-decoration:none;padding:.65rem 1.15rem;border-radius:6px;background:var(--accent);color:#fff;border:1px solid var(--accent)}
 .btn.ghost{background:transparent;color:var(--fg);border-color:var(--line)}
