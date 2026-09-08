@@ -27,7 +27,7 @@ h1{font-size:clamp(2rem,4.6vw,2.9rem);font-weight:700;letter-spacing:-.03em;line
 .actions{display:flex;gap:.6rem;flex-wrap:wrap}
 .btn{font-family:var(--mono);font-size:.8rem;letter-spacing:.04em;text-decoration:none;padding:.65rem 1.15rem;border-radius:6px;background:var(--accent);color:#fff;border:1px solid var(--accent)}
 .btn.ghost{background:transparent;color:var(--fg);border-color:var(--line)}
-.portrait img{width:100%;aspect-ratio:1/1.04;object-fit:cover;display:block;border-radius:64% 36% 55% 45% / 42% 58% 42% 58%;filter:none}
+.portrait img{width:100%;display:block;border-radius:28px}
 
 /* section shell */
 section{padding:2.2rem 0;border-top:1px solid var(--line)}
